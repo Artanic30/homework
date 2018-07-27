@@ -2,7 +2,7 @@ a = int(input('输入传送点个数:'))
 b = int(input('输入朋友家位置:'))
 i = 0
 c = 0
-n = 0
+n = 1
 list1 = []
 list2 = []
 while i < a:
@@ -12,17 +12,20 @@ while i < a:
     i += 1
     list1.append(h)
     list2.append(e)
-print('传送门起始位置：' + str(list1), '传送门结束位置：' + str(list2))
+# print('传送门起始位置：' + str(list1), '传送门结束位置：' + str(list2))
 if list2[-1] >= b:
-    print(list2[-1], b)
+     #print(list2[-1], b)
     if list1[0] == 0:
-        print(list1[n+1])
-        print(n)
+       # print(list1[n-1])
+       # print(list2[n])
+       # print(n)
         while n < a:
-            if list2[n] > list1[n+1]:
+            if list2[n-1] >= list1[n] and list2[n-1] < list2[n]:
                 pass
-                print(list2[n], list1[n+1])
+                n += 1
+            #print(n)
             else:print('No')
-            n += 1
+        if n == a:
+            print('Yes')
     else:print('No')
 else: print('No')
