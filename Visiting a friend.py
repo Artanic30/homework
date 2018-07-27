@@ -20,11 +20,13 @@ if list2[-1] >= b:
        # print(list2[n])
        # print(n)
         while n < a:
-            if list2[n-1] >= list1[n] and list2[n-1] < list2[n]:
+            # 1,2个条件限制后一个传送门起始位置在前一个门范围内3,限制后传送门为前进
+            if list2[n-1] >= list1[n]  and list1[n-1] < list1[n] and list2[n-1] < list2[n]:
                 pass
                 n += 1
             #print(n)
-            else:print('No')
+            else:break
+        print('No')
         if n == a:
             print('Yes')
     else:print('No')
