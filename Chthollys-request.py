@@ -1,63 +1,201 @@
 k, p = map(int, input().split())
-S = int()
-i = 0
+list = []
+i = 1
 v = int()
 R = 0
+x = 0
+s = 0
+d = ''
+c = ''
 if k <= 9:
+     while i <= k:
+        v = 11*i
+        list.append(v)
+        i += 1
+     for i in list:
+         s += i
+#     print(s)
+elif 10 <= k <= 99:
+    i = 10
+    x = 10
     while i <= k:
-       v = 11 * i
-       S += v
-       i += 1
-    R = S % p
-    print(R)
-elif 10 <= k <= 19:
-    i = 1001 + (k-10)*110
-    S = (1001 + i)*(k-9)/2 + 495
-    R = int(S % p)
-    print(R)
-elif 20 <= k <= 29:
-    i = 2002 + (k-20)*110
-    S = (2002 + i)*(k-19)/2 + 495 + 14960
-    R = int(S % p)
-    print(R)
-elif 30 <= k <= 39:
-    i = 3003 + (k - 30) * 110
-    S = (3003 + i) * (k - 29) / 2 + 495 + 14960 + 24970
-    R = int(S % p)
-    print(R)
-elif 40 <= k <= 49:
-    i = 4004 + (k - 40) * 110
-    S = (4004 + i) * (k - 39) / 2 + 495 + 14960 + 24970 + 34980
-    R = int(S % p)
-    print(R)
-elif 50 <= k <= 59:
-    i = 5005 + (k - 50) * 110
-    S = (5005 + i) * (k - 49) / 2 + 495 + 14960 + 24970 + 34980 + 44990
-    R = int(S % p)
-    print(R)
-elif 60 <= k <= 69:
-    i = 6006 + (k - 60) * 110
-    S = (6006 + i) * (k - 59) / 2 + 495 + 14960 + 24970 + 34980 + 44990 + 55000
-    R = int(S % p)
-    print(R)
-elif 70 <= k <= 79:
-    i = 7007 + (k - 70) * 110
-    S = (7007 + i) * (k - 69) / 2 + 495 + 14960 + 24970 + 34980 + 44990 + 55000 + 65010
-    R = int(S % p)
-    print(R)
-elif 80 <= k <= 89:
-    i = 8008 + (k - 80) * 110
-    S = (8008 + i) * (k - 79) / 2 + 495 + 14960 + 24970 + 34980 + 44990 + 55000 + 65010 + 75020
-    R = int(S % p)
-    print(R)
-elif 90 <= k <= 99:
-    i = 9009 + (k - 90) * 110
-    S = (9009 + i) * (k - 89) / 2 + 495 + 14960 + 24970 + 34980 + 44990 + 55000 + 65010 + 75020 + 85030
-    R = int(S % p)
-    print(R)
-    print(S)
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 495
+elif 100 <= k <= 999:
+    i = 100
+    x = 100
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 495495
+elif 1000 <= k <= 9999:
+    i = 1000
+    x = 1000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 495495495
+elif 10000 <= k <= 19999:
+    i = 10000
+    x = 10000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 495495495495
+elif 20000 <= k <= 29999:
+    i = 20000
+    x = 20000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 15495495455495
+elif 30000 <= k <= 39999:
+    i = 30000
+    x = 30000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 40495495425495
+elif 40000 <= k <= 49999:
+    i = 40000
+    x = 40000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for z in list:
+        s += z
+    s += 75495495405495
+elif 50000 <= k <= 59999:
+    i = 50000
+    x = 50000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 120495495395495
+elif 60000 <= k <= 69999:
+    i = 60000
+    x = 60000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 175495495395495
+elif 70000 <= k <= 79999:
+    i = 70000
+    x = 70000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 240495495405495
+elif 80000 <= k <= 89999:
+    i = 80000
+    x = 80000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 315495495425495
+elif 90000 <= k <= 99999:
+    i = 90000
+    x = 90000
+    while i <= k:
+        x = str(x)
+        d = x[::-1]
+        c = x + d
+        c = int(c)
+        list.append(c)
+        x = int(x)
+        x += 1
+        i += 1
+    for i in list:
+        s += i
+    s += 400495495455495
 else:
-    i = 100001 + (k-100)*1100
-    S = (100001 + i)*(k-99)/2 + 495 + 14960 + 24970 + 34980 + 44990 + 55000 + 65010 + 75020 + 85030 + 95040
-    R = int(S % p)
-    print(R)
+    s = 100000000001 + 495495495495495
+x = s % p
+print(x)
