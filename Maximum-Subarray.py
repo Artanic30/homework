@@ -14,7 +14,7 @@ while d < len(list):
     else:
         min = list[d]
     d += 1
-Solution = min
+mask = min
 while b <= i:
     a = 0
     while a + b <= i:
@@ -27,19 +27,19 @@ while b <= i:
             for x in nums[a + 1:a + b + 1]:
                 s2 += x
                 x = 0
-        if s1 <= s2 and s2 >= Solution:
-           Solution = s2
+        if s1 <= s2 and s2 >= mask:
+           mask = s2
         else:
             pass
         a += 1
         s1 = 0
         s2 = 0
-    list.append(Solution)
+    list.append(mask)
     b += 1
 while d < len(list):
     if list[d - 1] >= list[d]:
-        Solution = list[d - 1]
+        mask = list[d - 1]
     else:
-        Solution = list[d]
+        mask = list[d]
     d += 1
-print(Solution)
+print(mask)
