@@ -1,3 +1,7 @@
-N = input()
-n, m = list(map(int, input().split()))
-print(N, n, m)
+N = int(input())
+i = 1
+dict = {}
+while i <= N:
+    n, m = map(int, input().split())
+    dict[n] = m
+print(dict)
